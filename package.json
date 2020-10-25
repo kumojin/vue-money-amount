@@ -1,0 +1,52 @@
+{
+  "name": "vue-money-amount",
+  "description": "Used to display a localized money amount in the user's preferred locale, or a custom locale",
+  "author": {
+    "name": "Solutions Kumojin Inc.",
+    "email": "contact@kumojin.com"
+  },
+  "bugs": {
+    "url": "https://github.com/kumojin/vue-money-amount/issues"
+  },
+  "homepage": "https://github.com/kumojin/vue-money-amount#readme",
+  "license": "MIT",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name vue-money-amount --inline-vue src/MoneyAmount.vue",
+    "test:unit": "vue-cli-service test:unit",
+    "test:unit:watch": "vue-cli-service test:unit --watch",
+    "lint": "vue-cli-service lint --fix"
+  },
+  "dependencies": {
+    "get-user-locale": "^1.4.0",
+    "iso4217": "^0.2.0",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.0",
+    "@vue/cli-plugin-eslint": "^4.5.0",
+    "@vue/cli-plugin-unit-jest": "^4.5.8",
+    "@vue/cli-service": "^4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/test-utils": "^1.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "jest": "^26.6.1",
+    "prettier": "^1.19.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "main": "dist/vue-money-amount.common.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumojin/vue-money-amount.git"
+  },
+  "sideEffects": false
+}
