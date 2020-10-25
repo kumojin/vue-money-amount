@@ -10,7 +10,7 @@
   },
   "homepage": "https://github.com/kumojin/vue-money-amount#readme",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-money-amount --inline-vue src/MoneyAmount.vue",
