@@ -10,11 +10,10 @@
   "scripts": {
     "build": "vue-cli-service build --target lib --name vueMoneyAmount --inline-vue src/MoneyAmount.vue",
     "test:unit": "vue-cli-service test:unit",
-    "test:watch": "vue-cli-service test:unit --watch",
+    "test:unit:watch": "vue-cli-service test:unit --watch",
     "lint": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
     "get-user-locale": "^1.4.0",
     "iso4217": "^0.2.0",
     "vue": "^2.6.11"
