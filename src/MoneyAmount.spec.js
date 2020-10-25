@@ -20,7 +20,7 @@ describe('<MoneyAmount />', () => {
   let wrapper
 
   const mount = (props) => {
-    wrapper = shallowMount(MoneyAmount, {
+    return shallowMount(MoneyAmount, {
       localVue,
       propsData: {
         ...propsData,
