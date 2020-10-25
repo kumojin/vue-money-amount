@@ -10,6 +10,6 @@ module.exports = {
     '@assets(.*)$': '<rootDir>/src/assets/$1',
     '@modules(.*)$': '<rootDir>/src/modules/$1',
     '@styles(.*)$': '<rootDir>/src/styles/$1',
-    '^vue$': 'vue/dist/vue.common.js',
-  },
+    '^vue$': 'vue/dist/vue.common.js'
+  }
 }

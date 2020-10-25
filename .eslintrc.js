@@ -8,11 +8,11 @@ module.exports = {
     '@vue/standard'
   ],
   parserOptions: {
-    parser: "babel-eslint"
+    parser: 'babel-eslint'
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   },
   overrides: [
     {
@@ -22,11 +22,11 @@ module.exports = {
         '**/tests/unit/**/*.spec.{j,t}s?(x)',
         '**/tests/mocks/**/*.spec.{j,t}s?(x)',
         '**/tests/mocks/**/*.mock.{j,t}s?(x)',
-        '**/tests/__mocks__/**/*.{j,t}s?(x)',
+        '**/tests/__mocks__/**/*.{j,t}s?(x)'
       ],
       env: {
         jest: true
       }
     }
   ]
-};
+}
