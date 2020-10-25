@@ -1,5 +1,5 @@
-import { getUserLocale } from 'get-user-locale';
-import { utils as currencyUtils } from 'iso4217';
+import { getUserLocale } from 'get-user-locale'
+import { utils as currencyUtils } from 'iso4217'
 
 /**
  * Formats the given money "amount" with "currency" according to the
@@ -29,14 +29,14 @@ export const formatMoneyAmount = (
   } = {}
 ) => {
   if (!currency) {
-    return "";
+    return ''
   }
 
-  const precision = isFractioned ? currencyUtils.getByCode(currency)?.Fraction || 0 : 0;
+  const precision = isFractioned ? currencyUtils.getByCode(currency)?.Fraction || 0 : 0
 
   return Intl.NumberFormat(locale, {
     currency,
-    style: "currency",
+    style: 'currency',
     minimumFractionDigits // So we don't show .00 if the amount has no decimals
-  }).format(amount / Math.pow(10, precision));
-};
+  }).format(amount / Math.pow(10, precision))
+}
