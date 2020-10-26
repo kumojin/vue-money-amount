@@ -17,7 +17,7 @@ export default {
       type: String,
       required: true
     },
-    isFractioned: {
+    isFractionated: {
       type: Boolean,
       required: false,
       default: true
@@ -38,10 +38,11 @@ export default {
     },
     formattedAmount () {
       const options = {
-        isFractioned: this.isFractioned,
+        isFractionated: this.isFractionated,
         locale: this.locale || getUserLocale(),
         minimumFractionDigits: this.minimumFractionDigits
       }
+
       return formatMoneyAmount(this.amount, this.currency, options)
     }
   }
