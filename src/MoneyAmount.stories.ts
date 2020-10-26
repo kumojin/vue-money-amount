@@ -63,3 +63,21 @@ export const CADZero = () => ({
   }),
   template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });
+export const withoutCurrency = () => ({
+  components: { MoneyAmount },
+  data: () => ({
+    amount: 4284,
+    currency: '',
+    locale: 'fr-CA',
+    isFractionated: false,
+  }),
+  template: `
+    <money-amount 
+      :amount="amount" 
+      :currency="currency" 
+      :locale="locale" 
+      :isFractionated="isFractionated" 
+      :minimumFractionDigits="minimumFractionDigits"
+    />
+  `,
+});

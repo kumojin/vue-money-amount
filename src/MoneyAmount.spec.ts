@@ -41,19 +41,25 @@ describe('<MoneyAmount />', () => {
     });
   });
 
-  it('renders with default properties', () => {
-    wrapper = mount();
+  describe('when the component is mounted', () => {
+    describe('with default properties', () => {
+      it('should render with default properties', () => {
+        wrapper = mount();
 
-    expect(wrapper.text()).toBe('4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,');
-  });
-
-  it('renders with custom properties', () => {
-    wrapper = mount({
-      locale: 'fr-FR',
-      isFractionated: false,
-      minimumFractionDigits: 4,
+        expect(wrapper.text()).toBe('4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,');
+      });
     });
 
-    expect(wrapper.text()).toBe('4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,');
+    describe('with custom properties', () => {
+      it('should render with custom properties', () => {
+        wrapper = mount({
+          locale: 'fr-FR',
+          isFractionated: false,
+          minimumFractionDigits: 4,
+        });
+
+        expect(wrapper.text()).toBe('4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,');
+      });
+    });
   });
 });

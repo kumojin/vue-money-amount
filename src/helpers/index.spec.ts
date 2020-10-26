@@ -14,7 +14,9 @@ describe('formatMoneyAmount', () => {
     // With a currency that has no fractions, the result should be the same
     // regardless of "isFractionated"
     { ...baseCase, currency: 'JPY', isFractionated: false, minimumFractionDigits: 0, result: '¥428,400' },
-    { ...baseCase, currency: 'JPY', isFractionated: true, minimumFractionDigits: 0, result: '¥428,400' }
+    { ...baseCase, currency: 'JPY', isFractionated: true, minimumFractionDigits: 0, result: '¥428,400' },
+    // Without currency, the result should be only the decimal part
+    { ...baseCase, currency: '', isFractionated: true, minimumFractionDigits: 0, result: '428,400' },
   ];
 
   cases.forEach((c, idx) => {
