@@ -19,7 +19,7 @@ export const CADAmount = () => ({
   data: () => ({
     amount: 4284,
     currency: 'CAD',
-    locale: 'en-US'
+    locale: 'fr-CA'
   }),
   template: `<money-amount :amount="amount" :currency="currency" :locale="locale" />`
 });
