@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MoneyAmount /> when mounted renders the money amount with default options 1`] = `<span class="money-amount">4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0, </span>`;

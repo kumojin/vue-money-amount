@@ -40,6 +40,14 @@ describe('<MoneyAmount />', () => {
     })
   })
 
+  describe('when mounted', () => {
+    it('renders the money amount with default options', () => {
+      wrapper = mount()
+
+      expect(wrapper.html()).toMatchSnapshot();
+    });
+  });
+
   it('renders with default properties', () => {
     wrapper = mount()
 
