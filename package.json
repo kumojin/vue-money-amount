@@ -19,8 +19,8 @@
     "lint": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "get-user-locale": "^1.4.0",
-    "iso4217": "^0.2.0",
+    "get-user-locale": "1.4.0",
+    "iso4217": "0.2.0",
     "vue": "^2.x"
   },
   "devDependencies": {
