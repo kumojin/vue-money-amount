@@ -41,6 +41,6 @@ export default abstract class Helper {
       currency,
       style: 'currency',
       minimumFractionDigits, // So we don't show .00 if the amount has no decimals
-    }).format(amount / Math.pow(10, precision));
+    }).format(amount / (10 ** precision));
   }
 }
