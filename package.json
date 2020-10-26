@@ -16,14 +16,18 @@
     "build": "vue-cli-service build --target lib --name vue-money-amount --inline-vue src/MoneyAmount.vue",
     "test:unit": "vue-cli-service test:unit",
     "test:unit:watch": "vue-cli-service test:unit --watch",
-    "lint": "vue-cli-service lint --fix"
+    "lint": "vue-cli-service lint --fix",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build:storybook": "build-storybook -c .storybook -o dist/storybook"
   },
   "dependencies": {
     "get-user-locale": "^1.4.0",
     "iso4217": "^0.2.0",
+    "storybook": "^6.0.27",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@storybook/vue": "^6.0.27",
     "@vue/cli-plugin-babel": "^4.5.0",
     "@vue/cli-plugin-eslint": "^4.5.0",
     "@vue/cli-plugin-unit-jest": "^4.5.8",
