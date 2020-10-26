@@ -7,8 +7,16 @@ module.exports = {
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, '../src/'),
+    }
+
     config.module.rules.push({
-      include: path.resolve(__dirname, '../'),
+      test: /\.(ts|tsx)$/,
+      exclude: /node_modules/,
+      loader: ['babel-loader', 'awesome-typescript-loader'],
+      include:  path.resolve(__dirname, '../'),
     });
 
     // Return the altered config

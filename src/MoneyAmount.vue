@@ -3,34 +3,34 @@
 </template>
 
 <script>
-import { getUserLocale } from 'get-user-locale'
-import { formatMoneyAmount } from './helpers'
+import { getUserLocale } from 'get-user-locale';
+import Helper from '@/helpers';
 
 export default {
-  name: 'CheckoutPrice',
+  name: 'MoneyAmount',
   props: {
     amount: {
       type: Number,
-      required: true
+      required: true,
     },
     currency: {
       type: String,
-      required: true
+      required: true,
     },
     isFractionated: {
       type: Boolean,
       required: false,
-      default: true
+      default: true,
     },
     locale: {
       type: String,
-      required: false
+      required: false,
     },
     minimumFractionDigits: {
       type: Number,
       required: false,
-      default: 0
-    }
+      default: 0,
+    },
   },
   computed: {
     classes () {
@@ -42,17 +42,17 @@ export default {
         return 'money-amount--zero'
       }
     },
-    formattedAmount () {
+    formattedAmount() {
       const options = {
         isFractionated: this.isFractionated,
         locale: this.locale || getUserLocale(),
-        minimumFractionDigits: this.minimumFractionDigits
-      }
+        minimumFractionDigits: this.minimumFractionDigits,
+      };
 
-      return formatMoneyAmount(this.amount, this.currency, options)
-    }
-  }
-}
+      return Helper.formatMoneyAmount(this.amount, this.currency, options);
+    },
+  },
+};
 </script>
 <style lang="scss">
   .money-amount {
