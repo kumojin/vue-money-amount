@@ -1,4 +1,4 @@
-import MoneyAmount from './MoneyAmount';
+import MoneyAmount from './MoneyAmount.vue';
 
 export default {
   title: 'MoneyAmount',
@@ -9,9 +9,9 @@ export const USDAmount = () => ({
   data: () => ({
     amount: 4284,
     currency: 'USD',
-    locale: 'en-US'
+    locale: 'en-US',
   }),
-  template: `<money-amount :amount="amount" :currency="currency" :locale="locale" />`
+  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });
 
 export const CADAmount = () => ({
@@ -19,9 +19,9 @@ export const CADAmount = () => ({
   data: () => ({
     amount: 4284,
     currency: 'CAD',
-    locale: 'fr-CA'
+    locale: 'fr-CA',
   }),
-  template: `<money-amount :amount="amount" :currency="currency" :locale="locale" />`
+  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });
 
 export const JPYAmount = () => ({
@@ -29,7 +29,7 @@ export const JPYAmount = () => ({
   data: () => ({
     amount: 4284,
     currency: 'JPY',
-    locale: 'en-US'
+    locale: 'en-US',
   }),
-  template: `<money-amount :amount="amount" :currency="currency" :locale="locale" />`
+  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });
