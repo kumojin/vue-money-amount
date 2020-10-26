@@ -1,11 +1,11 @@
-import { formatMoneyAmount } from './'
+import Helper from '@/helpers/index';
 
 describe('formatMoneyAmount', () => {
-  const amount = 428400
-  const currency = 'CAD'
-  const locale = 'fr-CA'
+  const amount = 428400;
+  const currency = 'CAD';
+  const locale = 'fr-CA';
 
-  const baseCase = { amount, currency, locale }
+  const baseCase = { amount, currency, locale };
   const cases = [
     { ...baseCase, isFractionated: false, minimumFractionDigits: 0, result: 'CA$428,400' },
     { ...baseCase, isFractionated: true, minimumFractionDigits: 0, result: 'CA$4,284' },
@@ -15,12 +15,12 @@ describe('formatMoneyAmount', () => {
     // regardless of "isFractionated"
     { ...baseCase, currency: 'JPY', isFractionated: false, minimumFractionDigits: 0, result: '¥428,400' },
     { ...baseCase, currency: 'JPY', isFractionated: true, minimumFractionDigits: 0, result: '¥428,400' }
-  ]
+  ];
 
   cases.forEach((c, idx) => {
     it(`should return the formatted amount for case ${idx + 1}`, () => {
-      const f = formatMoneyAmount(c.amount, c.currency, { ...c })
-      expect(f).toBe(c.result)
+      const f = Helper.formatMoneyAmount(c.amount, c.currency, { ...c });
+      expect(f).toBe(c.result);
     })
   })
 })
