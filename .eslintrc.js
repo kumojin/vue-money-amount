@@ -33,6 +33,7 @@ module.exports = {
     'operator-linebreak': ['error', 'after'],
     'no-use-before-define': 'off',
     'newline-before-return': ['error', 'always'],
+    'object-curly-spacing': ['error', 'always'],
   },
   ignorePatterns: ['vue.config.js', '**/*.mock.*', '**/*.spec.*'],
   overrides: [
