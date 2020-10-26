@@ -34,7 +34,13 @@ export default {
   },
   computed: {
     classes () {
-      return 'money-amount'
+      if (this.amount > 0) {
+        return 'money-amount--positive'
+      } else if (this.amount < 0) {
+        return 'money-amount--negative'
+      } else {
+        return 'money-amount--zero'
+      }
     },
     formattedAmount () {
       const options = {
@@ -48,3 +54,14 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .money-amount {
+    &--positive {
+      color: green;
+    }
+
+    &--negative {
+      color: red;
+    }
+  }
+</style>

@@ -26,11 +26,11 @@
     "vue": "^2.x"
   },
   "devDependencies": {
+    "@storybook/vue": "6.0.21",
     "@vue/cli-plugin-babel": "^4.5.8",
     "@vue/cli-plugin-eslint": "^4.5.8",
     "@vue/cli-plugin-unit-jest": "^4.5.8",
     "@vue/cli-service": "^4.5.8",
-    "@storybook/vue": "6.0.21",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "^1.1.0",
@@ -44,8 +44,8 @@
     "eslint-plugin-vue": "^7.1.0",
     "jest": "^26.6.1",
     "prettier": "^2.1.2",
-    "vue-template-compiler": "^2.6.12",
-    "storybook": "^6.0.27"
+    "storybook": "^6.0.27",
+    "vue-template-compiler": "^2.6.12"
   },
   "main": "dist/vue-money-amount.common.js",
   "repository": {
