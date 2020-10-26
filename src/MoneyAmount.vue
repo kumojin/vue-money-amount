@@ -31,16 +31,18 @@ export default {
       required: false,
       default: 0,
     },
+    hasColors: {
+      type: Boolean,
+      default: true,
+    }
   },
   computed: {
     classes () {
-      if (this.amount > 0) {
-        return 'money-amount--positive'
-      } else if (this.amount < 0) {
-        return 'money-amount--negative'
-      } else {
-        return 'money-amount--zero'
-      }
+      return this.amount > 0 && this.hasColors
+       ? 'money-amount--positive'
+       : this.amount < 0 && this.hasColors
+         ? 'money-amount--negative'
+         : 'money-amount--zero';
     },
     formattedAmount() {
       const options = {
