@@ -14,16 +14,6 @@ export const USDAmount = () => ({
   template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });
 
-export const CADAmount = () => ({
-  components: { MoneyAmount },
-  data: () => ({
-    amount: 4284,
-    currency: 'CAD',
-    locale: 'fr-CA',
-  }),
-  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
-});
-
 export const JPYAmount = () => ({
   components: { MoneyAmount },
   data: () => ({
@@ -52,4 +42,24 @@ export const CADAmountNotFractionatedWithMinimumFractionDigits2 = () => ({
       :minimumFractionDigits="minimumFractionDigits"
     />
   `,
+});
+
+export const USDNegative = () => ({
+  components: { MoneyAmount },
+  data: () => ({
+    amount: -4284,
+    currency: 'USD',
+    locale: 'en-US',
+  }),
+  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
+});
+
+export const CADZero = () => ({
+  components: { MoneyAmount },
+  data: () => ({
+    amount: 0,
+    currency: 'CAD',
+    locale: 'fr-CA',
+  }),
+  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });

@@ -40,7 +40,6 @@ export default {
         return 'money-amount--negative'
       } else {
         return 'money-amount--zero'
-        
       }
     },
     formattedAmount() {
