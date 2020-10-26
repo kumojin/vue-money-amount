@@ -21,7 +21,7 @@
   "dependencies": {
     "get-user-locale": "^1.4.0",
     "iso4217": "^0.2.0",
-    "vue": "^2.6.11"
+    "vue": "^2.x"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.8",
