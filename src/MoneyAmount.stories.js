@@ -33,3 +33,15 @@ export const JPYAmount = () => ({
   }),
   template: `<money-amount :amount="amount" :currency="currency" :locale="locale" />`
 });
+
+export const CADAmountNotFractionatedWithMinimumFractionDigits2 = () => ({
+  components: { MoneyAmount },
+  data: () => ({
+    amount: 4284,
+    currency: 'CAD',
+    locale: 'fr-CA',
+    isFractionated: false,
+    minimumFractionDigits: 2,
+  }),
+  template: `<money-amount :amount="amount" :currency="currency" :locale="locale" :isFractionated="isFractionated" :minimumFractionDigits="minimumFractionDigits" />`,
+});
