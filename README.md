@@ -33,6 +33,16 @@ Vue.component('vue-money-amout', VueMoneyAmount);
 | isFractionated            | Boolean         | no       | true                |
 | minimumFractionDigits     | Int             | no       | 0                   |
 
+The `isFractionated` prop defines if the amount prop value is already fractionated or not.
+
+Eg. 
+- If the `amount` is `4284` and `isFractionated` is `true`, it will display: `42.84`
+- If the `amount` is `4284` and `isFractionated` is `false`, it will display: `4284`
+
+The `minimumFractionDigits` prop defines the minimum number of decimal digits.
+
+Eg.
+- If the `amount` is `4284`, `minimumFractionDigits` is `3`, it will display: `42.840`
 
 ## Contribution
 
