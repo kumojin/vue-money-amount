@@ -34,15 +34,16 @@ export default {
     hasColors: {
       type: Boolean,
       default: true,
-    }
+    },
   },
   computed: {
-    classes () {
-      return this.amount > 0 && this.hasColors
-       ? 'money-amount--positive'
-       : this.amount < 0 && this.hasColors
-         ? 'money-amount--negative'
-         : 'money-amount--zero';
+    classes() {
+      if (this.amount > 0 && this.hasColors) {
+        return 'money-amount--positive';
+      } if (this.amount < 0 && this.hasColors) {
+        return 'money-amount--negative';
+      }
+      return 'money-amount--zero';
     },
     formattedAmount() {
       const options = {
