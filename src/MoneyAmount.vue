@@ -3,48 +3,48 @@
 </template>
 
 <script>
-import { getUserLocale } from 'get-user-locale'
-import { formatMoneyAmount } from './helpers'
+  import { getUserLocale } from 'get-user-locale';
+  import Helper, { MoneyAmountOptions } from '@/helpers';
 
-export default {
-  name: 'CheckoutPrice',
-  props: {
-    amount: {
-      type: Number,
-      required: true
-    },
-    currency: {
-      type: String,
-      required: true
-    },
-    isFractionated: {
-      type: Boolean,
-      required: false,
-      default: true
-    },
-    locale: {
-      type: String,
-      required: false
-    },
-    minimumFractionDigits: {
-      type: Number,
-      required: false,
-      default: 0
-    }
-  },
-  computed: {
-    classes () {
-      return 'money-amount'
-    },
-    formattedAmount () {
-      const options = {
-        isFractionated: this.isFractionated,
-        locale: this.locale || getUserLocale(),
-        minimumFractionDigits: this.minimumFractionDigits
+  export default {
+    name: 'MoneyAmount',
+    props: {
+      amount: {
+        type: Number,
+        required: true,
+      },
+      currency: {
+        type: String,
+        required: true,
+      },
+      isFractionated: {
+        type: Boolean,
+        required: false,
+        default: true,
+      },
+      locale: {
+        type: String,
+        required: false,
+      },
+      minimumFractionDigits: {
+        type: Number,
+        required: false,
+        default: 0,
       }
+    },
+    computed: {
+      classes () {
+        return 'money-amount';
+      },
+      formattedAmount () {
+        const options: MoneyAmountOptions = {
+          isFractionated: this.isFractionated,
+          locale: this.locale || getUserLocale(),
+          minimumFractionDigits: this.minimumFractionDigits,
+        };
 
-      return formatMoneyAmount(this.amount, this.currency, options)
+        return Helper.formatMoneyAmount(this.amount, this.currency, options);
+      }
     }
-  }
-}
+  };
 </script>
