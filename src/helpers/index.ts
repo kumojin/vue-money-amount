@@ -37,7 +37,7 @@ export default abstract class Helper {
       style: currency ? 'currency' : 'decimal',
       currency,
       minimumFractionDigits, // So we don't show .00 if the amount has no decimals
-    }
+    };
 
     if (!currency) {
       delete options.currency;
