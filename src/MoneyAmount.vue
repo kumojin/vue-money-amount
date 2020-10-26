@@ -55,6 +55,7 @@ export default {
   },
 };
 </script>
+<<<<<<< HEAD
 <style lang="scss">
   .money-amount {
     &--positive {
@@ -66,3 +67,5 @@ export default {
     }
   }
 </style>
+=======
+>>>>>>> 6c69da341a414977b4b09147848f95f5d4b1581e
