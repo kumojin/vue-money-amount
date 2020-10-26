@@ -7,14 +7,14 @@ describe('formatMoneyAmount', () => {
 
   const baseCase = { amount, currency, locale }
   const cases = [
-    { ...baseCase, isFractioned: false, minimumFractionDigits: 0, result: 'CA$428,400' },
-    { ...baseCase, isFractioned: true, minimumFractionDigits: 0, result: 'CA$4,284' },
-    { ...baseCase, isFractioned: false, minimumFractionDigits: 2, result: 'CA$428,400.00' },
-    { ...baseCase, isFractioned: true, minimumFractionDigits: 2, result: 'CA$4,284.00' },
+    { ...baseCase, isFractionated: false, minimumFractionDigits: 0, result: 'CA$428,400' },
+    { ...baseCase, isFractionated: true, minimumFractionDigits: 0, result: 'CA$4,284' },
+    { ...baseCase, isFractionated: false, minimumFractionDigits: 2, result: 'CA$428,400.00' },
+    { ...baseCase, isFractionated: true, minimumFractionDigits: 2, result: 'CA$4,284.00' },
     // With a currency that has no fractions, the result should be the same
-    // regardless of "isFractioned"
-    { ...baseCase, currency: 'JPY', isFractioned: false, minimumFractionDigits: 0, result: '¥428,400' },
-    { ...baseCase, currency: 'JPY', isFractioned: true, minimumFractionDigits: 0, result: '¥428,400' }
+    // regardless of "isFractionated"
+    { ...baseCase, currency: 'JPY', isFractionated: false, minimumFractionDigits: 0, result: '¥428,400' },
+    { ...baseCase, currency: 'JPY', isFractionated: true, minimumFractionDigits: 0, result: '¥428,400' }
   ]
 
   cases.forEach((c, idx) => {
