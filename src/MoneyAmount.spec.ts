@@ -1,6 +1,6 @@
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import { getUserLocale } from 'get-user-locale';
-import Helper from './helpers'
+import Helper from './helpers';
 
 import MoneyAmount from '@/MoneyAmount.vue';
 
