@@ -31,16 +31,12 @@ export default {
       required: false,
       default: 0,
     },
-    hasColors: {
-      type: Boolean,
-      default: true,
-    },
   },
   computed: {
     classes() {
-      if (this.amount > 0 && this.hasColors) {
+      if (this.amount > 0) {
         return 'money-amount--positive';
-      } if (this.amount < 0 && this.hasColors) {
+      } if (this.amount < 0) {
         return 'money-amount--negative';
       }
       return 'money-amount--zero';
@@ -57,14 +53,3 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-  .money-amount {
-    &--positive {
-      color: green;
-    }
-
-    &--negative {
-      color: red;
-    }
-  }
-</style>
