@@ -34,7 +34,12 @@ export default {
   },
   computed: {
     classes() {
-      return 'money-amount';
+      if (this.amount > 0) {
+        return 'money-amount--positive';
+      } if (this.amount < 0) {
+        return 'money-amount--negative';
+      }
+      return 'money-amount--zero';
     },
     formattedAmount() {
       const options = {
