@@ -39,6 +39,7 @@ export default {
       } if (this.amount < 0) {
         return 'money-amount--negative';
       }
+
       return 'money-amount--zero';
     },
     formattedAmount() {

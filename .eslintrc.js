@@ -32,6 +32,9 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'operator-linebreak': ['error', 'after'],
     'no-use-before-define': 'off',
+    'newline-before-return': ['error', 'always'],
+    'object-curly-spacing': ['error', 'always'],
+    'eol-last': ['error', 'always'],
   },
   ignorePatterns: ['vue.config.js', '**/*.mock.*', '**/*.spec.*'],
   overrides: [
