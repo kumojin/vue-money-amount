@@ -3,7 +3,7 @@ import Helper from '@/helpers/index';
 describe('formatMoneyAmount', () => {
   const amount = 428400;
   const currency = 'CAD';
-  const locale = 'fr-CA';
+  const locale = 'en-EN';
 
   const baseCase = { amount, currency, locale };
   const cases = [
