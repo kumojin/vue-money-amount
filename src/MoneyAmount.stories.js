@@ -1,8 +1,8 @@
-import MoneyAmount from './MoneyAmount';
+import MoneyAmount from './MoneyAmount'
 
 export default {
-  title: 'MoneyAmount',
-};
+  title: 'MoneyAmount'
+}
 
 export const USDAmount = () => ({
   components: { MoneyAmount },
@@ -11,8 +11,8 @@ export const USDAmount = () => ({
     currency: 'USD',
     locale: 'en-US'
   }),
-  template: `<money-amount :amount="amount" :currency="currency" :locale="locale" />`
-});
+  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />'
+})
 
 export const CADAmount = () => ({
   components: { MoneyAmount },
@@ -21,8 +21,8 @@ export const CADAmount = () => ({
     currency: 'CAD',
     locale: 'fr-CA'
   }),
-  template: `<money-amount :amount="amount" :currency="currency" :locale="locale" />`
-});
+  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />'
+})
 
 export const JPYAmount = () => ({
   components: { MoneyAmount },
@@ -31,8 +31,8 @@ export const JPYAmount = () => ({
     currency: 'JPY',
     locale: 'en-US'
   }),
-  template: `<money-amount :amount="amount" :currency="currency" :locale="locale" />`
-});
+  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />'
+})
 
 export const CADAmountNotFractionatedWithMinimumFractionDigits2 = () => ({
   components: { MoneyAmount },
@@ -41,7 +41,7 @@ export const CADAmountNotFractionatedWithMinimumFractionDigits2 = () => ({
     currency: 'CAD',
     locale: 'fr-CA',
     isFractionated: false,
-    minimumFractionDigits: 2,
+    minimumFractionDigits: 2
   }),
-  template: `<money-amount :amount="amount" :currency="currency" :locale="locale" :isFractionated="isFractionated" :minimumFractionDigits="minimumFractionDigits" />`,
-});
+  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" :isFractionated="isFractionated" :minimumFractionDigits="minimumFractionDigits" />'
+})
