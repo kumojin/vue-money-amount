@@ -1,10 +1,12 @@
 module.exports = {
   verbose: true,
+  resetMocks: false,
   preset: '@vue/cli-plugin-unit-jest/presets/typescript-and-babel',
   testMatch: [
     '**/src/**/*.spec.[jt]s?(x)',
     '**/src/__tests__/*.[jt]s?(x)',
   ],
+  modulePathIgnorePatterns: ['<rootDir>/dist/*', '<rootDir>/coverage/*', '<rootDir>/logs/*'],
   moduleNameMapper: {
     '@assets(.*)$': '<rootDir>/src/assets/$1',
     '@modules(.*)$': '<rootDir>/src/modules/$1',
