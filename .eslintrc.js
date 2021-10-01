@@ -32,7 +32,14 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'operator-linebreak': ['error', 'after'],
     'no-use-before-define': 'off',
-    'newline-before-return': ['error', 'always'],
+    'padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'always',
+        prev: 'var',
+        next: 'return',
+      },
+    ],
     'object-curly-spacing': ['error', 'always'],
     'eol-last': ['error', 'always'],
   },
