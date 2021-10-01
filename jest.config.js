@@ -1,4 +1,5 @@
 module.exports = {
+  verbose: true,
   preset: '@vue/cli-plugin-unit-jest/presets/typescript-and-babel',
   testMatch: [
     '**/src/**/*.spec.[jt]s?(x)',
@@ -13,4 +14,8 @@ module.exports = {
   transformIgnorePatterns: [
     'node_modules/?!(vue-plugin-load-script)',
   ],
+  transform: {
+    '.*\\.(vue)$': 'vue-jest',
+    '^.+\\.tsx?$': 'ts-jest',
+  },
 };
