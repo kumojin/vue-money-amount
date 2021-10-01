@@ -14,8 +14,8 @@
   "private": false,
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-money-amount --inline-vue src/MoneyAmount.vue",
-    "test:unit": "vue-cli-service test:unit",
-    "test:unit:watch": "vue-cli-service test:unit --watch",
+    "test:unit": "jest",
+    "test:unit:watch": "jest --watch",
     "lint": "vue-cli-service lint --fix",
     "storybook": "start-storybook -s ./public -p 6006",
     "build:storybook": "build-storybook -c .storybook -o dist/storybook"
