@@ -61,5 +61,37 @@ describe('<MoneyAmount />', () => {
         expect(wrapper.text()).toBe('4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,');
       });
     });
+
+    describe('with classes', () => {
+      describe('with positive amount', () => {
+        it('should render with positive amount', () => {
+          wrapper = mount();
+
+          expect(wrapper.classes()).toEqual(['money-amount--positive']);
+        });
+      });
+
+      describe('with negative amount', () => {
+        it('should render with negative amount', () => {
+          wrapper = mount({
+            amount: -2233,
+          });
+
+          expect(wrapper.classes()).toEqual(['money-amount--negative']);
+        });
+      });
+
+      describe('with zero amount', () => {
+        it('should render with zero amount', () => {
+          wrapper = mount({
+            amount: 0,
+          });
+
+          expect(wrapper.classes()).toEqual(['money-amount--zero']);
+        });
+      });
+    });
+
+
   });
 });
