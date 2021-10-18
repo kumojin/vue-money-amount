@@ -37,7 +37,7 @@ describe('<MoneyAmount />', () => {
         return acc;
       }, '');
 
-      return `${amount}-${currency}-${optsAsString}`;
+      return `${amount}-${currency}-${optsAsString.trim()}`;
     });
   });
 
@@ -47,6 +47,7 @@ describe('<MoneyAmount />', () => {
         wrapper = mount();
 
         expect(wrapper.text()).toBe('4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,');
+        expect(wrapper.attributes('title')).toBe('4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,');
       });
     });
 
@@ -59,6 +60,7 @@ describe('<MoneyAmount />', () => {
         });
 
         expect(wrapper.text()).toBe('4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,');
+        expect(wrapper.attributes('title')).toBe('4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,');
       });
     });
 

@@ -1,5 +1,5 @@
 <template>
-  <span :class="classes" v-text="formattedAmount" />
+  <span :class="classes" v-text="formattedAmount" :title="formattedAmount" />
 </template>
 
 <script>
