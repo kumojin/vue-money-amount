@@ -8,4 +8,10 @@ module.exports = {
       plugins: ['transform-require-context'],
     },
   },
+  plugins: [
+    [
+      '@babel/plugin-proposal-private-property-in-object',
+      { loose: true },
+    ],
+  ],
 };
