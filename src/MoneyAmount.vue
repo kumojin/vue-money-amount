@@ -4,7 +4,7 @@
 
 <script>
 import { getUserLocale } from 'get-user-locale';
-import Helper from '@/helpers';
+import Helper from './helpers/index.ts';
 
 export default {
   name: 'MoneyAmount',
@@ -22,9 +22,15 @@ export default {
       required: false,
       default: true,
     },
+    hasColors: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     locale: {
       type: String,
       required: false,
+      default: null,
     },
     minimumFractionDigits: {
       type: Number,
@@ -34,6 +40,10 @@ export default {
   },
   computed: {
     classes() {
+      if (!this.hasColors) {
+        return '';
+      }
+
       if (this.amount > 0) {
         return 'money-amount--positive';
       } if (this.amount < 0) {
