@@ -84,7 +84,7 @@ export const USDNegativeWithoutColor = () => ({
   template: '<money-amount :amount="amount" :currency="currency" :locale="locale" :hasColors="false" />',
 });
 
-export const withoutCurrency = () => ({
+export const WithoutCurrency = () => ({
   components: { MoneyAmount },
   data: () => ({
     amount: 4284,
