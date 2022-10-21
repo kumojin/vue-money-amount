@@ -22,18 +22,19 @@ module.exports = {
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
     },
   },
+  core: {
+    builder: 'webpack5',
+  },
   webpackFinal: async (config) => {
     config.resolve.plugins = config.resolve.plugins || [];
-    config.resolve.plugins.push(new TsconfigPathsPlugin({}));
+    config.resolve.plugins.push(new TsconfigPathsPlugin({
+      extensions: config.resolve.extensions,
+    }));
 
     config.module.rules.push(
       {
         test: /\.scss$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'sass-loader' },
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
         include: path.resolve(__dirname, '../'),
       },
     )

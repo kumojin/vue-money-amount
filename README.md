@@ -32,6 +32,7 @@ Vue.component('vue-money-amout', VueMoneyAmount);
 | locale                    | String          | no       | User locale         |
 | isFractionated            | Boolean         | no       | true                |
 | minimumFractionDigits     | Int             | no       | 0                   |
+| hasColors                 | Boolean         | no       | true                |
 
 The `isFractionated` prop defines if the amount prop value is already fractionated or not.
 

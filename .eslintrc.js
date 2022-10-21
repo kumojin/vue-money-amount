@@ -3,11 +3,7 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: [
-    'plugin:vue/essential',
-    '@vue/airbnb',
-    '@vue/typescript/recommended',
-  ],
+  extends: ['plugin:vue/essential', '@vue/airbnb', '@vue/typescript/recommended', 'plugin:storybook/recommended'],
   parserOptions: {
     ecmaVersion: 2020,
   },
@@ -42,6 +38,7 @@ module.exports = {
     ],
     'object-curly-spacing': ['error', 'always'],
     'eol-last': ['error', 'always'],
+    'vue/max-len': ['error', { code: 140 }],
   },
   ignorePatterns: ['vue.config.js', '**/*.mock.*', '**/*.spec.*'],
   overrides: [

@@ -92,8 +92,17 @@ describe('<MoneyAmount />', () => {
           expect(wrapper.classes()).toEqual(['money-amount--zero']);
         });
       });
+
+      describe('without color', () => {
+        it('should render without classes', () => {
+          wrapper = mount({
+            amount: -2233,
+            hasColors: false,
+          });
+
+          expect(wrapper.classes()).toEqual([]);
+        });
+      });
     });
-
-
   });
 });
