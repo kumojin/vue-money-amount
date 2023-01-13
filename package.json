@@ -21,7 +21,7 @@
     "build:storybook": "build-storybook -c .storybook -o dist/storybook"
   },
   "dependencies": {
-    "core-js": "3.25.5",
+    "core-js": "3.27.1",
     "get-user-locale": "2.0.0",
     "iso4217": "0.2.0",
     "vue": "2.x"
