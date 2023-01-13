@@ -30,7 +30,7 @@ describe('<MoneyAmount />', () => {
   };
 
   beforeEach(() => {
-    (getUserLocale as jest.Mock).mockReturnValue(CA_LOCALE);
+    (getUserLocale as any as jest.Mock).mockReturnValue(CA_LOCALE);
     (Helper.formatMoneyAmount as jest.Mock).mockImplementation((amount, currency, opts) => {
       const optsAsString = Object.keys(opts).reduce((acc, optionName) => {
         acc += `${optionName}: ${opts[optionName]}, `
