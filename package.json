@@ -27,8 +27,8 @@
     "vue": "2.x"
   },
   "devDependencies": {
-    "@babel/core": "7.19.3",
-    "@babel/preset-env": "7.19.4",
+    "@babel/core": "7.20.12",
+    "@babel/preset-env": "7.20.2",
     "@storybook/addon-actions": "6.5.12",
     "@storybook/addon-essentials": "6.5.12",
     "@storybook/addon-links": "6.5.12",
