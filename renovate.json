@@ -9,6 +9,12 @@
       "matchUpdateTypes": ["major"],
       "groupName": "vue",
       "enabled": false
+    },
+    {
+      "matchPackagePatterns": ["vue"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "vue-loader",
+      "enabled": false
     }
   ]
 }
