@@ -65,7 +65,7 @@
     "jest-config": "29.3.1",
     "jest-environment-jsdom": "29.3.1",
     "jest-serializer-vue": "2.0.2",
-    "prettier": "2.8.2",
+    "prettier": "2.8.3",
     "sass": "1.57.1",
     "sass-loader": "13.2.0",
     "storybook": "6.5.15",
