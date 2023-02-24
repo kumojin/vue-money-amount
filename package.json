@@ -81,5 +81,8 @@
     "type": "git",
     "url": "git+https://github.com/kumojin/vue-money-amount.git"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ]
 }
