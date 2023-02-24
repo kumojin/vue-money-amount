@@ -3,6 +3,10 @@
   "extends": [
     "config:base"
   ],
+  "automerge": true,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "matchPackagePatterns": ["vue"],
