@@ -1,5 +1,5 @@
 {
-  "name": "vue-money-amount",
+  "name": "@kumojin/vue-money-amount",
   "description": "Used to display a localized money amount in the user's preferred locale, or a custom locale",
   "author": {
     "name": "Solutions Kumojin Inc.",
@@ -81,5 +81,8 @@
     "type": "git",
     "url": "git+https://github.com/kumojin/vue-money-amount.git"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ]
 }
