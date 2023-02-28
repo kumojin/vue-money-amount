@@ -1,7 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    "group:all",
+    "schedule:weekly"
   ],
   "automerge": true,
   "lockFileMaintenance": {
@@ -15,7 +17,7 @@
       "enabled": false
     },
     {
-      "matchPackagePatterns": ["vue-loader", "@vue/vue-loader-v15"],
+      "matchPackagePatterns": ["vue-loader"],
       "matchUpdateTypes": ["major"],
       "groupName": "vue-loader",
       "enabled": false
