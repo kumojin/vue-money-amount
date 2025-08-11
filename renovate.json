@@ -25,9 +25,9 @@
       "enabled": false
     },
     {
-      "matchLabels": ["security"],
+      "matchDepTypes": ["dependencies", "devDependencies"],
       "minimumReleaseAge": "0 days",
-      "prPriority": 6
+      "prPriority": 6,
     },
     {
       "minimumReleaseAge": "14 days",
