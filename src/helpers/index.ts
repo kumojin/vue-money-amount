@@ -28,21 +28,24 @@ export default abstract class Helper {
    */
   public static formatMoneyAmount(
     amount: number,
-    currency: string = null,
-    { locale = getUserLocale(), isFractionated = false, minimumFractionDigits = 0 }: MoneyAmountOptions = {},
+    currency?: string,
+    {
+      locale = getUserLocale(),
+      isFractionated = false,
+      minimumFractionDigits = 0,
+    }: MoneyAmountOptions = {},
   ) {
-    const precision = isFractionated && currency ? currencyUtils.getByCode(currency)?.Fraction || 0 : 0;
+    const precision =
+      isFractionated && currency
+        ? currencyUtils.getByCode(currency)?.Fraction || 0
+        : 0;
 
-    const options = {
+    const options: Intl.NumberFormatOptions = {
       style: currency ? 'currency' : 'decimal',
-      currency,
       minimumFractionDigits, // So we don't show .00 if the amount has no decimals
+      ...(currency && { currency }),
     };
 
-    if (!currency) {
-      delete options.currency;
-    }
-
-    return Intl.NumberFormat(locale, options).format(amount / (10 ** precision));
+    return Intl.NumberFormat(locale, options).format(amount / 10 ** precision);
   }
 }

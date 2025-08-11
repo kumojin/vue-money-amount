@@ -1,6 +1,7 @@
-import Vue from 'vue'
-import { addDecorator } from '@storybook/vue'
+import Vue from 'vue';
 
-addDecorator(() => ({
-  template: '<story/>',
-}))
+export const decorators = [
+  () => ({
+    template: '<story/>',
+  }),
+];

@@ -1,11 +1,13 @@
-import { createLocalVue, shallowMount } from '@vue/test-utils';
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils';
 import { getUserLocale } from 'get-user-locale';
 import Helper from './helpers';
+import { vi } from 'vitest';
+import Vue from 'vue';
 
 import MoneyAmount from '@/MoneyAmount.vue';
 
-jest.mock('get-user-locale');
-jest.mock('./helpers');
+vi.mock('get-user-locale');
+vi.mock('./helpers');
 
 const localVue = createLocalVue();
 
@@ -17,10 +19,10 @@ describe('<MoneyAmount />', () => {
     amount: AMOUNT,
     currency: CURRENCY,
   };
-  let wrapper;
+  let wrapper: Wrapper<Vue>;
 
   const mount = (props = {}) => {
-    return shallowMount(MoneyAmount, {
+    return shallowMount(MoneyAmount as any, {
       localVue,
       propsData: {
         ...propsData,
@@ -30,15 +32,19 @@ describe('<MoneyAmount />', () => {
   };
 
   beforeEach(() => {
-    (getUserLocale as any as jest.Mock).mockReturnValue(CA_LOCALE);
-    (Helper.formatMoneyAmount as jest.Mock).mockImplementation((amount, currency, opts) => {
-      const optsAsString = Object.keys(opts).reduce((acc, optionName) => {
-        acc += `${optionName}: ${opts[optionName]}, `
-        return acc;
-      }, '');
+    (getUserLocale as any as ReturnType<typeof vi.fn>).mockReturnValue(
+      CA_LOCALE,
+    );
+    (Helper.formatMoneyAmount as ReturnType<typeof vi.fn>).mockImplementation(
+      (amount, currency, opts) => {
+        const optsAsString = Object.keys(opts).reduce((acc, optionName) => {
+          acc += `${optionName}: ${opts[optionName]}, `;
+          return acc;
+        }, '');
 
-      return `${amount}-${currency}-${optsAsString.trim()}`;
-    });
+        return `${amount}-${currency}-${optsAsString.trim()}`;
+      },
+    );
   });
 
   describe('when the component is mounted', () => {
@@ -46,8 +52,12 @@ describe('<MoneyAmount />', () => {
       it('should render with default properties', () => {
         wrapper = mount();
 
-        expect(wrapper.text()).toBe('4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,');
-        expect(wrapper.attributes('title')).toBe('4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,');
+        expect(wrapper.text()).toBe(
+          '4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,',
+        );
+        expect(wrapper.attributes('title')).toBe(
+          '4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,',
+        );
       });
     });
 
@@ -59,8 +69,12 @@ describe('<MoneyAmount />', () => {
           minimumFractionDigits: 4,
         });
 
-        expect(wrapper.text()).toBe('4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,');
-        expect(wrapper.attributes('title')).toBe('4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,');
+        expect(wrapper.text()).toBe(
+          '4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,',
+        );
+        expect(wrapper.attributes('title')).toBe(
+          '4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,',
+        );
       });
     });
 
