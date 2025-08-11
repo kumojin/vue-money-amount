@@ -31,15 +31,19 @@ describe('<MoneyAmount />', () => {
   };
 
   beforeEach(() => {
-    (getUserLocale as any as ReturnType<typeof vi.fn>).mockReturnValue(CA_LOCALE);
-    (Helper.formatMoneyAmount as ReturnType<typeof vi.fn>).mockImplementation((amount, currency, opts) => {
-      const optsAsString = Object.keys(opts).reduce((acc, optionName) => {
-        acc += `${optionName}: ${opts[optionName]}, `
-        return acc;
-      }, '');
+    (getUserLocale as any as ReturnType<typeof vi.fn>).mockReturnValue(
+      CA_LOCALE,
+    );
+    (Helper.formatMoneyAmount as ReturnType<typeof vi.fn>).mockImplementation(
+      (amount, currency, opts) => {
+        const optsAsString = Object.keys(opts).reduce((acc, optionName) => {
+          acc += `${optionName}: ${opts[optionName]}, `;
+          return acc;
+        }, '');
 
-      return `${amount}-${currency}-${optsAsString.trim()}`;
-    });
+        return `${amount}-${currency}-${optsAsString.trim()}`;
+      },
+    );
   });
 
   describe('when the component is mounted', () => {
@@ -47,8 +51,12 @@ describe('<MoneyAmount />', () => {
       it('should render with default properties', () => {
         wrapper = mount();
 
-        expect(wrapper.text()).toBe('4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,');
-        expect(wrapper.attributes('title')).toBe('4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,');
+        expect(wrapper.text()).toBe(
+          '4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,',
+        );
+        expect(wrapper.attributes('title')).toBe(
+          '4284-USD-isFractionated: true, locale: fr-CA, minimumFractionDigits: 0,',
+        );
       });
     });
 
@@ -60,8 +68,12 @@ describe('<MoneyAmount />', () => {
           minimumFractionDigits: 4,
         });
 
-        expect(wrapper.text()).toBe('4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,');
-        expect(wrapper.attributes('title')).toBe('4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,');
+        expect(wrapper.text()).toBe(
+          '4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,',
+        );
+        expect(wrapper.attributes('title')).toBe(
+          '4284-USD-isFractionated: false, locale: fr-FR, minimumFractionDigits: 4,',
+        );
       });
     });
 

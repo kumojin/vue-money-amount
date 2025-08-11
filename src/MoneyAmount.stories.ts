@@ -11,7 +11,8 @@ export const USDAmount = () => ({
     currency: 'USD',
     locale: 'en-US',
   }),
-  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
+  template:
+    '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });
 
 export const CADAmount = () => ({
@@ -21,7 +22,8 @@ export const CADAmount = () => ({
     currency: 'CAD',
     locale: 'fr-CA',
   }),
-  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
+  template:
+    '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });
 
 export const JPYAmount = () => ({
@@ -31,7 +33,8 @@ export const JPYAmount = () => ({
     currency: 'JPY',
     locale: 'en-US',
   }),
-  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
+  template:
+    '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });
 
 export const CADAmountNotFractionatedWithMinimumFractionDigits2 = () => ({
@@ -61,7 +64,8 @@ export const USDNegative = () => ({
     currency: 'USD',
     locale: 'en-US',
   }),
-  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
+  template:
+    '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });
 
 export const CADZero = () => ({
@@ -71,7 +75,8 @@ export const CADZero = () => ({
     currency: 'USD',
     locale: 'en-US',
   }),
-  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
+  template:
+    '<money-amount :amount="amount" :currency="currency" :locale="locale" />',
 });
 
 export const USDNegativeWithoutColor = () => ({
@@ -81,7 +86,8 @@ export const USDNegativeWithoutColor = () => ({
     currency: 'USD',
     locale: 'en-US',
   }),
-  template: '<money-amount :amount="amount" :currency="currency" :locale="locale" :hasColors="false" />',
+  template:
+    '<money-amount :amount="amount" :currency="currency" :locale="locale" :hasColors="false" />',
 });
 
 export const WithoutCurrency = () => ({

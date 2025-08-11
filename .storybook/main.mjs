@@ -1,13 +1,7 @@
 export default {
-  stories: [
-    '../src/**/*.stories.mdx',
-    '../src/**/*.stories.@(js|jsx|ts|tsx)'
-  ],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
 
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials'
-  ],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
 
   features: {
     postcss: false,
@@ -19,17 +13,18 @@ export default {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
+      propFilter: (prop) =>
+        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
     },
   },
 
   framework: {
     name: '@storybook/vue-vite',
-    options: {}
+    options: {},
   },
 
   docs: {
-    autodocs: true
+    autodocs: true,
   },
 
   async viteFinal(config) {
@@ -44,4 +39,4 @@ export default {
 
     return config;
   },
-}
+};

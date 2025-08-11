@@ -29,9 +29,16 @@ export default abstract class Helper {
   public static formatMoneyAmount(
     amount: number,
     currency: string = null,
-    { locale = getUserLocale(), isFractionated = false, minimumFractionDigits = 0 }: MoneyAmountOptions = {},
+    {
+      locale = getUserLocale(),
+      isFractionated = false,
+      minimumFractionDigits = 0,
+    }: MoneyAmountOptions = {},
   ) {
-    const precision = isFractionated && currency ? currencyUtils.getByCode(currency)?.Fraction || 0 : 0;
+    const precision =
+      isFractionated && currency
+        ? currencyUtils.getByCode(currency)?.Fraction || 0
+        : 0;
 
     const options = {
       style: currency ? 'currency' : 'decimal',
@@ -43,6 +50,6 @@ export default abstract class Helper {
       delete options.currency;
     }
 
-    return Intl.NumberFormat(locale, options).format(amount / (10 ** precision));
+    return Intl.NumberFormat(locale, options).format(amount / 10 ** precision);
   }
 }

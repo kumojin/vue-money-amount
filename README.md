@@ -1,4 +1,5 @@
 # vue-money-amount
+
 Displays a stylable money amount and currency according to the user's preferred formatting.
 
 ## Installation
@@ -21,24 +22,26 @@ Vue.component('vue-money-amout', VueMoneyAmount);
 
 ## Props API
 
-| Props                     | Type            | Required | Default             |
-|---------------------------|-----------------|----------|---------------------|
-| amount                    | Float           | true     | -                   |
-| currency                  | String          | true     | -                   |
-| locale                    | String          | no       | User locale         |
-| isFractionated            | Boolean         | no       | true                |
-| minimumFractionDigits     | Int             | no       | 0                   |
-| hasColors                 | Boolean         | no       | true                |
+| Props                 | Type    | Required | Default     |
+| --------------------- | ------- | -------- | ----------- |
+| amount                | Float   | true     | -           |
+| currency              | String  | true     | -           |
+| locale                | String  | no       | User locale |
+| isFractionated        | Boolean | no       | true        |
+| minimumFractionDigits | Int     | no       | 0           |
+| hasColors             | Boolean | no       | true        |
 
 The `isFractionated` prop defines if the amount prop value is already fractionated or not.
 
-Eg. 
+Eg.
+
 - If the `amount` is `4284` and `isFractionated` is `true`, it will display: `42.84`
 - If the `amount` is `4284` and `isFractionated` is `false`, it will display: `4284`
 
 The `minimumFractionDigits` prop defines the minimum number of decimal digits.
 
 Eg.
+
 - If the `amount` is `4284`, `minimumFractionDigits` is `3`, it will display: `42.840`
 
 ## Contribution

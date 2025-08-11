@@ -38,7 +38,6 @@ module.exports = [
       'no-empty': 0,
       semi: ['error', 'always'],
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-      'operator-linebreak': ['error', 'after'],
       'no-use-before-define': 'off',
       'padding-line-between-statements': [
         'error',
@@ -84,6 +83,12 @@ module.exports = [
     },
   },
   {
-    ignores: ['vite.config.ts', '**/*.mock.*', '**/*.spec.*', 'dist/**', '**/*.stories.{js,ts}'],
+    ignores: [
+      'vite.config.ts',
+      '**/*.mock.*',
+      '**/*.spec.*',
+      'dist/**',
+      '**/*.stories.{js,ts}',
+    ],
   },
 ];

@@ -46,7 +46,8 @@ export default {
 
       if (this.amount > 0) {
         return 'money-amount--positive';
-      } if (this.amount < 0) {
+      }
+      if (this.amount < 0) {
         return 'money-amount--negative';
       }
 
