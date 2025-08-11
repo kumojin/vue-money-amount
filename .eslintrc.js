@@ -40,7 +40,7 @@ module.exports = {
     'eol-last': ['error', 'always'],
     'vue/max-len': ['error', { code: 140 }],
   },
-  ignorePatterns: ['vue.config.js', '**/*.mock.*', '**/*.spec.*'],
+  ignorePatterns: ['vite.config.ts', '**/*.mock.*', '**/*.spec.*'],
   overrides: [
     {
       files: [
