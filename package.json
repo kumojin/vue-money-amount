@@ -28,8 +28,6 @@
     "vue": "2.x"
   },
   "devDependencies": {
-    "@babel/core": "7.21.0",
-    "@babel/preset-env": "7.20.2",
     "@storybook/addon-actions": "7.6.20",
     "@storybook/addon-essentials": "7.6.20",
     "@storybook/addon-links": "7.6.20",
