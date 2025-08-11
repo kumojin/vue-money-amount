@@ -9,37 +9,56 @@
     "customManagers:biomeVersions"
   ],
   "osvVulnerabilityAlerts": true,
-  "labels": ["dependencies"],
+  "labels": [
+    "dependencies"
+  ],
   "commitMessagePrefix": "build(deps):",
   "packageRules": [
     {
-      "matchPackagePatterns": ["vue"],
-      "matchUpdateTypes": ["major"],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "groupName": "vue",
-      "enabled": false
+      "enabled": false,
+      "matchPackageNames": [
+        "/vue/"
+      ]
     },
     {
-      "matchPackagePatterns": ["vue-loader"],
-      "matchUpdateTypes": ["major"],
+      "matchUpdateTypes": [
+        "major"
+      ],
       "groupName": "vue-loader",
-      "enabled": false
+      "enabled": false,
+      "matchPackageNames": [
+        "/vue-loader/"
+      ]
     },
     {
-      "matchDepTypes": ["dependencies", "devDependencies"],
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies"
+      ],
       "minimumReleaseAge": "0 days",
-      "prPriority": 6,
+      "prPriority": 6
     },
     {
       "minimumReleaseAge": "14 days",
-      "matchUpdateTypes": ["major"]
+      "matchUpdateTypes": [
+        "major"
+      ]
     },
     {
       "minimumReleaseAge": "7 days",
-      "matchUpdateTypes": ["minor"]
+      "matchUpdateTypes": [
+        "minor"
+      ]
     },
     {
       "minimumReleaseAge": "3 days",
-      "matchUpdateTypes": ["patch"]
+      "matchUpdateTypes": [
+        "patch"
+      ]
     }
   ]
 }
