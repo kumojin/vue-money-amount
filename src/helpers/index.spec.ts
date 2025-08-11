@@ -1,8 +1,9 @@
 import Helper from '@/helpers/index';
+import { vi } from 'vitest';
 
-jest.mock('get-user-locale', () => ({
+vi.mock('get-user-locale', () => ({
   __esModule: true,
-  default: jest.fn().mockReturnValue('fr-CA'),
+  default: vi.fn().mockReturnValue('fr-CA'),
 }));
 
 describe('formatMoneyAmount', () => {

@@ -12,14 +12,14 @@ This is a Vue 2 component library that provides a single `MoneyAmount` component
 
 ### Development
 - `yarn` - Install dependencies
-- `yarn build` - Build the library using Vue CLI
+- `yarn build` - Build the library using Vite
 - `yarn lint` - Run ESLint with auto-fix
 - `yarn storybook` - Start Storybook development server on port 6006
 - `yarn build:storybook` - Build Storybook for production
 
 ### Testing
-- `yarn test:unit` - Run Jest tests once
-- `yarn test:unit:watch` - Run Jest tests in watch mode
+- `yarn test:unit` - Run Vitest tests once
+- `yarn test:unit:watch` - Run Vitest tests in watch mode
 
 ## Architecture
 
@@ -38,10 +38,10 @@ Contains the core business logic in `Helper.formatMoneyAmount()` which:
 - **iso4217** - Currency precision data (e.g., USD has 2 decimal places, JPY has 0)
 
 ### Build Configuration
-- **Vue CLI 5** with TypeScript and Babel presets
-- **Jest** with Vue 2 testing utilities (`@vue/vue2-jest`)
-- **Storybook 6.x** for component documentation and development
-- Uses webpack 5 builder with custom SCSS support
+- **Vite** with TypeScript and Vue 2 support
+- **Vitest** for fast unit testing
+- **Storybook 7.x** for component documentation and development
+- Uses Vite builder with custom SCSS support
 
 ### Important Notes
 - The component supports "fractionated" amounts where raw integers are divided by currency precision (e.g., 4284 cents becomes $42.84 for USD)

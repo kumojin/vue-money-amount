@@ -1,11 +1,12 @@
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import { getUserLocale } from 'get-user-locale';
 import Helper from './helpers';
+import { vi } from 'vitest';
 
 import MoneyAmount from '@/MoneyAmount.vue';
 
-jest.mock('get-user-locale');
-jest.mock('./helpers');
+vi.mock('get-user-locale');
+vi.mock('./helpers');
 
 const localVue = createLocalVue();
 
@@ -30,8 +31,8 @@ describe('<MoneyAmount />', () => {
   };
 
   beforeEach(() => {
-    (getUserLocale as any as jest.Mock).mockReturnValue(CA_LOCALE);
-    (Helper.formatMoneyAmount as jest.Mock).mockImplementation((amount, currency, opts) => {
+    (getUserLocale as any as ReturnType<typeof vi.fn>).mockReturnValue(CA_LOCALE);
+    (Helper.formatMoneyAmount as ReturnType<typeof vi.fn>).mockImplementation((amount, currency, opts) => {
       const optsAsString = Object.keys(opts).reduce((acc, optionName) => {
         acc += `${optionName}: ${opts[optionName]}, `
         return acc;
