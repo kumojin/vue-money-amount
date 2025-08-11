@@ -24,7 +24,7 @@
     "core-js": "3.29.0",
     "get-user-locale": "2.2.1",
     "iso4217": "0.2.0",
-    "vue": "2.x"
+    "vue": "3.x"
   },
   "devDependencies": {
     "@babel/core": "7.21.0",
