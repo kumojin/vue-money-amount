@@ -23,7 +23,7 @@
       "matchUpdateTypes": ["major"],
       "groupName": "vue-loader",
       "enabled": false
-    }
+    },
     {
       "matchLabels": ["security"],
       "minimumReleaseAge": "0 days",
