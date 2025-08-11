@@ -53,6 +53,5 @@ Contains the core business logic in `Helper.formatMoneyAmount()` which:
 ### Important Notes
 
 - The component supports "fractionated" amounts where raw integers are divided by currency precision (e.g., 4284 cents becomes $42.84 for USD)
-- TypeScript is configured with relaxed settings (`noImplicitAny: false`, `strictNullChecks: false`)
+- TypeScript is configured with string settings
 - The build targets ES6 with CommonJS output for library distribution
-- CSS classes are applied conditionally: `money-amount--positive`, `money-amount--negative`, `money-amount--zero`

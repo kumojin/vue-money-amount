@@ -1,7 +1,8 @@
-import { createLocalVue, shallowMount } from '@vue/test-utils';
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils';
 import { getUserLocale } from 'get-user-locale';
 import Helper from './helpers';
 import { vi } from 'vitest';
+import Vue from 'vue';
 
 import MoneyAmount from '@/MoneyAmount.vue';
 
@@ -18,10 +19,10 @@ describe('<MoneyAmount />', () => {
     amount: AMOUNT,
     currency: CURRENCY,
   };
-  let wrapper;
+  let wrapper: Wrapper<Vue>;
 
   const mount = (props = {}) => {
-    return shallowMount(MoneyAmount, {
+    return shallowMount(MoneyAmount as any, {
       localVue,
       propsData: {
         ...propsData,
