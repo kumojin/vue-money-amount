@@ -7,10 +7,6 @@ Displays a stylable money amount and currency according to the user's preferred 
 
 `yarn add vue-money-amount`
 
-### Using npm
-
-`npm i --save vue-money-amount`
-
 ## Usage
 
 ```js
