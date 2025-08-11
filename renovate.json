@@ -1,14 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
-    "group:all",
-    "schedule:weekly"
+    "config:best-practices",
+    ":disablePeerDependencies",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    ":maintainLockFilesWeekly",
+    ":automergeMinor",
+    "customManagers:biomeVersions"
   ],
-  "automerge": true,
-  "lockFileMaintenance": {
-    "enabled": true
-  },
+  "osvVulnerabilityAlerts": true,
+  "labels": ["dependencies"],
+  "commitMessagePrefix": "build(deps):",
   "packageRules": [
     {
       "matchPackagePatterns": ["vue"],
@@ -21,6 +23,23 @@
       "matchUpdateTypes": ["major"],
       "groupName": "vue-loader",
       "enabled": false
+    }
+    {
+      "matchLabels": ["security"],
+      "minimumReleaseAge": "0 days",
+      "prPriority": 6
+    },
+    {
+      "minimumReleaseAge": "14 days",
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "minimumReleaseAge": "7 days",
+      "matchUpdateTypes": ["minor"]
+    },
+    {
+      "minimumReleaseAge": "3 days",
+      "matchUpdateTypes": ["patch"]
     }
   ]
 }
