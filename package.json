@@ -21,7 +21,7 @@
     "build:storybook": "storybook build -c .storybook -o dist/storybook"
   },
   "dependencies": {
-    "get-user-locale": "2.2.1",
+    "get-user-locale": "3.0.0",
     "iso4217": "0.2.0"
   },
   "peerDependencies": {
