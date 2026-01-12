@@ -59,7 +59,7 @@
     "typescript": "5.9.3",
     "vite": "5.4.21",
     "vite-plugin-dts": "4.5.4",
-    "vitest": "3.2.4",
+    "vitest": "4.0.16",
     "vue": "2.7.16",
     "vue-eslint-parser": "10.2.0",
     "vue-template-compiler": "2.7.16"
