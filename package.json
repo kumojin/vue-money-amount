@@ -57,7 +57,7 @@
     "sass": "1.97.2",
     "storybook": "7.6.21",
     "typescript": "5.9.3",
-    "vite": "5.4.21",
+    "vite": "7.3.0",
     "vite-plugin-dts": "4.5.4",
     "vitest": "3.2.4",
     "vue": "2.7.16",
