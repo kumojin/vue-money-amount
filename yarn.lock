@@ -5854,10 +5854,10 @@ handlebars@^4.7.7:
   optionalDependencies:
     uglify-js "^3.1.4"
 
-happy-dom@20.7.0:
-  version "20.7.0"
-  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-20.7.0.tgz#b0b02f8c9b7553e093ca7ef414f17ad95436e43b"
-  integrity sha512-hR/uLYQdngTyEfxnOoa+e6KTcfBFyc1hgFj/Cc144A5JJUuHFYqIEBDcD4FeGqUeKLRZqJ9eN9u7/GDjYEgS1g==
+happy-dom@20.7.2:
+  version "20.7.2"
+  resolved "https://registry.yarnpkg.com/happy-dom/-/happy-dom-20.7.2.tgz#ffe0bb7721865004d970527e92cb72aa71d7662c"
+  integrity sha512-J3zofqwyCWLzjcOSanu4BCUmbMVTrxcEwwbFQSiTh1kfYlkQITefPRBa0Esfy+kzLenjQpcSNKcIqpUTcfpWhA==
   dependencies:
     "@types/node" ">=20.0.0"
     "@types/whatwg-mimetype" "^3.0.2"
